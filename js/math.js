@@ -17,7 +17,8 @@ console.log(`${enteredNum} rounded down is: ${Math.floor(enteredNum)}`);
 
 enteredNum = prompt('Enter 5 single digit numbers like this: 5,1,8,1,9');
 enteredNumArr = enteredNum.match(/\d/g).map(Number);
-console.log(`${Math.max(...enteredNumArr)} is the largest number, ${Math.min(...enteredNumArr)} is the smalles number in your list (${enteredNum}).`);
+sortedList = enteredNumArr.sort((a, b) => a - b);
+console.log(`${sortedList[sortedList.length-1]} is the largest number, ${sortedList[0]} is the smallest number in your list (${enteredNum}).`);
 
 //STEP 5
 
